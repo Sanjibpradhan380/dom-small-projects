@@ -1,31 +1,21 @@
+// var elems = document.querySelectorAll('.elem');
 
-let keys= document.querySelectorAll('.key');
+// elems.forEach(function(elem){
+//     elem.addEventListener('click',function(){
+        
+//     })
+// })
 
-const sounds ={
-    0:'28.mp3',
-    1:'29.mp3',
-    2:'30.mp3',
-    3:'31.mp3',
-    4:'32.mp3',
-    5:'33.mp3',
-    6:'34.mp3',
-    7:'35.mp3',
-    8:'36.mp3',
-    9:'37.mp3',
-    10:'38.mp3',
-    11:'39.mp3'
-};
-
-keys.forEach((key, index) => {
-key.addEventListener('click', () => {
-const audio = new Audio(sounds[index]);
-audio.currentTime = 0;
-audio.play();
-});
-});
+let allbtn = document.querySelectorAll('button');
+let h2s = document.querySelectorAll('h2');
 
 
-let bank =['manushya','rakhda','diksha','sonam'];
-bank.forEach((key,index)=>{
-    console.log(`${key}, ${index}`);
-});
+allbtn.forEach(function(elems){
+    elems.addEventListener('click',function(){
+       if(elems.innerHTML =="Add Friend"){
+         elems.innerHTML = 'Remove Fried';
+       }else{
+        elems.innerHTML ="Add Friend";
+       }
+    })
+})
